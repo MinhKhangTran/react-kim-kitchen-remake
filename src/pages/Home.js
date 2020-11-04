@@ -1,7 +1,14 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Navbar, Footer } from "../components";
+import { Navbar, Footer, Cards, About, Slider, Hero } from "../components";
 
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <>
+      <Hero></Hero>
+      <Cards></Cards>
+      <About></About>
+      <Slider></Slider>
+      <Footer></Footer>
+    </>
+  );
 }

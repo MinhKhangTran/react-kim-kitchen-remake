@@ -1,5 +1,6 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { Home } from "./pages";
+import { Home, Menu } from "./pages";
+import { Route, Switch } from "react-router-dom";
+import { Navbar } from "./components";
 
 // const ContainerVariants = {
 //   hidden: { opacity: 0 },
@@ -7,7 +8,19 @@ import { Home } from "./pages";
 // };
 
 function App() {
-  return <div className="">App</div>;
+  return (
+    <>
+      <Navbar></Navbar>
+      <Switch>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <Route path="/menu">
+          <Menu></Menu>
+        </Route>
+      </Switch>
+    </>
+  );
 }
 
 export default App;
